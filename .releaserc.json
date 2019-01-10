@@ -1,0 +1,39 @@
+{
+  "branch": "master",
+  "tagFormat": "v${version}",
+  "plugins": [
+    ["@semantic-release/commit-analyzer", {
+      "preset": "angular",
+      "releaseRules": [
+        {"type": "fix", "release": "patch"},
+        {"type": "Fix", "release": "patch"},
+        {"type": "update", "release": "minor"},
+        {"type": "Update", "release": "minor"},
+        {"type": "feature", "release": "minor"},
+        {"type": "Feature", "release": "minor"},
+        {"type": "performance", "release": "minor"},
+        {"type": "Performance", "release": "minor"}
+      ]
+    }],
+    ["@semantic-release/release-notes-generator", {
+      "preset": "angular",
+      "parserOpts": {
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+      },
+      "writerOpts": {
+        "commitsSort": ["subject", "scope"]
+      }
+    }],
+    ["@semantic-release/changelog", {
+      "changelogFile": "CHANGELOG.md"
+    }],
+    ["@semantic-release/npm", {
+      "npmPublish": false
+    }],
+    ["@semantic-release/git", {
+      "assets": ["CHANGELOG.md", "package.json", "package-lock.json"],
+      "message": "Release <%= nextRelease.version %> - <%= new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' }) %> [skip ci]\n\n<%= nextRelease.notes %> "
+    }],
+    "@semantic-release/github"
+  ]
+}
