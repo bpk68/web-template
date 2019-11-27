@@ -12,11 +12,11 @@ module.exports = {
         app: './src/index.js'
     },
     plugins: [
-         new CleanWebpackPlugin(['dist']),
-         new HtmlWebpackPlugin({
-             title: 'Production',
-             inject: 'footer',
-             template: './templates/index.html'
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({
+            title: 'Production',
+            inject: 'footer',
+            template: './templates/index.html'
         }),
         // again, use with the above plugin for copying static assets
         // new CopyWebpackPlugin([
@@ -27,7 +27,7 @@ module.exports = {
     ],
     output: {
         filename: '[name].bundle.min.js',
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, '../dist')
     },
     resolve: {
         alias: {
@@ -46,7 +46,7 @@ module.exports = {
                         options: {
                             //disable: true, // webpack@2.x and newer
                         },
-                }]
+                    }]
             },
             {
                 test: /\.js$/,
@@ -57,6 +57,14 @@ module.exports = {
                         cacheDirectory: true
                     }
                 }
+            },
+            {
+                test: /\.(css|scss|sass)$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
             }
         ]
     }
