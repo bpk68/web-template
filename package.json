@@ -29,7 +29,7 @@
     "babel-loader": "8.1.0",
     "clean-webpack-plugin": "1.0.1",
     "copy-webpack-plugin": "6.2.0",
-    "css-loader": "2.1.1",
+    "css-loader": "4.3.0",
     "file-loader": "3.0.1",
     "html-webpack-plugin": "4.5.0",
     "image-webpack-loader": "7.0.1",
