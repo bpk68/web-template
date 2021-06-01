@@ -35,7 +35,7 @@
     "image-webpack-loader": "7.0.1",
     "mini-css-extract-plugin": "1.6.0",
     "node-sass": "6.0.0",
-    "optimize-css-assets-webpack-plugin": "5.0.4",
+    "optimize-css-assets-webpack-plugin": "5.0.6",
     "sass-loader": "11.1.1",
     "style-loader": "2.0.0",
     "uglifyjs-webpack-plugin": "2.2.0",
