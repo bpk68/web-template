@@ -37,7 +37,7 @@
     "node-sass": "6.0.0",
     "sass-loader": "12.1.0",
     "optimize-css-assets-webpack-plugin": "6.0.1",
-    "style-loader": "2.0.0",
+    "style-loader": "3.2.1",
     "uglifyjs-webpack-plugin": "2.2.0",
     "url-loader": "4.1.1",
     "webpack-cli": "4.7.2",
