@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "7.12.1",
-    "semantic-release": "17.4.4"
+    "semantic-release": "17.4.7"
   },
   "devDependencies": {
     "@babel/cli": "7.14.8",
